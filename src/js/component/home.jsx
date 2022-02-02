@@ -35,12 +35,12 @@ const Home = () => {
 
 		while (ctrl && i < table.length && j < table.length) {
 			if (
-				table[i][j] != table[i + 1][j + 1] ||
+				table[i][j] != table[i + 1][j - 1] ||
 				typeof table[i][j] === "undefined"
 			) {
 				ctrl = false;
 			} else {
-				i += 1;
+				i -= 1;
 				j += 1;
 			}
 		}
