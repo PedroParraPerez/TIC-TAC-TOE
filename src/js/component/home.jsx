@@ -67,7 +67,6 @@ const Home = () => {
 		let ctrl = true;
 
 		while (ctrl && i < table.length) {
-			console.log(`i value: ${i}`);
 			// recorrer columnas => buscar NO coincidencias
 			let j = 1;
 			let ctrl2 = true;
@@ -93,7 +92,6 @@ const Home = () => {
 		let ctrl = true;
 
 		while (ctrl && j < table.length) {
-			console.log(`j value: ${j}`);
 			// recorrer columnas => buscar NO coincidencias
 			let i = 1;
 			let ctrl2 = true;
@@ -136,7 +134,7 @@ const Home = () => {
 	}
 	return (
 		<>
-			<body>
+			<div className="body">
 				<h1 className="title">Tick Tack Toe</h1>
 				<p className="quest">
 					¿El gato de Schrödinger esta vivo o muerto?
@@ -155,7 +153,7 @@ const Home = () => {
 						))}
 					</tbody>
 				</table>
-			</body>
+			</div>
 		</>
 	);
 };

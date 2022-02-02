@@ -1,12 +1,16 @@
-body{
-    background-image: url("../img/gato.png");
-   
+.body{
+    width: 100%;
+    height: 100rem;
+    background-image: url(../img/gato.png);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
 .board{
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 3rem;
+  
 }
 .item{
     background-color: white;
@@ -20,7 +24,7 @@ body{
 
 }
 .title{
-    margin-top: 3%;
+    padding-top: 3%;
     width: 100%;
     text-align: center;
 
