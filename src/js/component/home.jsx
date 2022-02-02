@@ -8,8 +8,22 @@ const Home = () => {
 		[undefined, undefined, undefined],
 		[undefined, undefined, undefined],
 	]);
-	const [turn, setTurn] = useState("x");
+	const [turn, setTurn] = useState("😸");
 	const [winner, setWinner] = useState("");
+
+	const ChangeTurn = () => setTurn(turn === "😸" ? "😿" : "😸");
+
+	const SetValue = (i, j) => {
+		if (typeof table[i][j] === "undefined") {
+			if (!CheckWinner()) {
+				const tmp = table;
+				tmp[i][j] = turn;
+				setTable(table);
+				ChangeTurn();
+			}
+		} else {
+		}
+	};
 
 	const CheckMayorDiagonal = () => {
 		let i = 1;
@@ -109,23 +123,11 @@ const Home = () => {
 			CheckMenorDiagonal()
 		) {
 			if (winner == "") {
-				setWinner(`Alguien ha ganado`);
+				setWinner(`${turn} ha ganado`);
 			}
 		}
 	};
-	const ChangeTurn = () => setTurn(turn === "x" ? "o" : "x");
 
-	const SetValue = (i, j) => {
-		if (typeof table[i][j] === "undefined") {
-			if (!CheckWinner()) {
-				const tmp = table;
-				tmp[i][j] = turn;
-				setTable(table);
-				ChangeTurn();
-			}
-		} else {
-		}
-	};
 	if (CheckWinner()) {
 		const tmp = table;
 		tmp[i][j] = turn;
@@ -134,20 +136,26 @@ const Home = () => {
 	}
 	return (
 		<>
-			<h1>{winner}</h1>
-			<table>
-				<tbody>
-					{table.map((row, i) => (
-						<tr key={i}>
-							{row.map((column, j) => (
-								<td onClick={() => SetValue(i, j)} key={j}>
-									<div className="item">{column}</div>
-								</td>
-							))}
-						</tr>
-					))}
-				</tbody>
-			</table>
+			<body>
+				<h1 className="title">Tick Tack Toe</h1>
+				<p className="quest">
+					¿El gato de Schrödinger esta vivo o muerto?
+				</p>
+				<h1 className="winner">{winner}</h1>
+				<table className="board">
+					<tbody>
+						{table.map((row, i) => (
+							<tr key={i}>
+								{row.map((column, j) => (
+									<td onClick={() => SetValue(i, j)} key={j}>
+										<div className="item">{column}</div>
+									</td>
+								))}
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</body>
 		</>
 	);
 };

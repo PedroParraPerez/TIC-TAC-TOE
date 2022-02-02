@@ -1,7 +1,40 @@
+body{
+    background-image: url("../img/gato.png");
+   
+}
+
+
+.board{
+    margin: auto;
+    margin-top: 5rem;
+}
 .item{
-    background-color: red;
-    width: 20rem;
-    height: 20rem;
+    background-color: white;
+    border: 2pt solid black;
+    margin: auto;
+    width: 10rem;
+    height: 10rem;
     font-size: 5rem;
+    justify-content: center;
+    text-align: center;
 
 }
+.title{
+    margin-top: 3%;
+    width: 100%;
+    text-align: center;
+
+}
+.quest{
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+
+.winner{
+    margin: auto;
+    text-align: center;
+}
+
