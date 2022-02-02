@@ -10,19 +10,42 @@ const Home = () => {
 	]);
 	const [turn, setTurn] = useState("x");
 
-	// const CheckMayorDiagonal = () => {
-	// 	let i = 1;
-	// 	let ctrl = false;
+	const CheckMayorDiagonal = () => {
+		let i = 1;
+		let j = 1;
+		let ctrl = true;
 
-	// 	while (ctrl && i < table.length) {
-	// 		if (table[i][i] != table[i - 1][i - 1]) {
-	// 			ctrl = true;
-	// 		} else {
-	// 			i += 1;
-	// 		}
-	// 	}
-	// 	return ctrl;
-	// };
+		while (ctrl && i < table.length && j < table.length) {
+			if (
+				table[i][j] != table[i - 1][j - 1] ||
+				typeof table[i][j] === "undefined"
+			) {
+				ctrl = false;
+			} else {
+				i += 1;
+				j += 1;
+			}
+		}
+		return ctrl;
+	};
+	const CheckMenorDiagonal = () => {
+		let i = 1;
+		let j = 1;
+		let ctrl = true;
+
+		while (ctrl && i < table.length && j < table.length) {
+			if (
+				table[i][j] != table[i + 1][j + 1] ||
+				typeof table[i][j] === "undefined"
+			) {
+				ctrl = false;
+			} else {
+				i += 1;
+				j += 1;
+			}
+		}
+		return ctrl;
+	};
 
 	const CheckRow = () => {
 		let i = 0;
@@ -78,7 +101,12 @@ const Home = () => {
 	};
 
 	const CheckWinner = () => {
-		if (CheckRow() || CheckColumnns()) {
+		if (
+			CheckRow() ||
+			CheckColumnns() ||
+			CheckMayorDiagonal() ||
+			CheckMenorDiagonal()
+		) {
 			alert("Hay un ganador");
 			window.location.reload(true);
 		}
