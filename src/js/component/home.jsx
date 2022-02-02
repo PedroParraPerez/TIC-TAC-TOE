@@ -9,6 +9,7 @@ const Home = () => {
 		[undefined, undefined, undefined],
 	]);
 	const [turn, setTurn] = useState("x");
+	const [winner, setWinner] = useState("");
 
 	const CheckMayorDiagonal = () => {
 		let i = 1;
@@ -107,8 +108,9 @@ const Home = () => {
 			CheckMayorDiagonal() ||
 			CheckMenorDiagonal()
 		) {
-			alert("Hay un ganador");
-			window.location.reload(true);
+			if (winner == "") {
+				setWinner(`Alguien ha ganado`);
+			}
 		}
 	};
 	const ChangeTurn = () => setTurn(turn === "x" ? "o" : "x");
@@ -122,7 +124,6 @@ const Home = () => {
 				ChangeTurn();
 			}
 		} else {
-			alert("Hey esta posicion ya estaba ocupada");
 		}
 	};
 	if (CheckWinner()) {
@@ -133,6 +134,7 @@ const Home = () => {
 	}
 	return (
 		<>
+			<h1>{winner}</h1>
 			<table>
 				<tbody>
 					{table.map((row, i) => (
