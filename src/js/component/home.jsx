@@ -132,7 +132,7 @@ const Home = () => {
 			<div className="body">
 				<h1 className="title">Tick Tack Toe</h1>
 				<p className="quest">
-					¿El gato de Schrödinger esta vivo o muerto?
+					<b>¿El gato de Schrödinger esta vivo o muerto?</b>
 				</p>
 				<h1 className="winner">{winner}</h1>
 				<table className="board">
