@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 import "../../styles/index.css";
 
-//create your first component
 const Home = () => {
 	const [table, setTable] = useState([
 		[undefined, undefined, undefined],
@@ -9,19 +9,22 @@ const Home = () => {
 		[undefined, undefined, undefined],
 	]);
 	const [turn, setTurn] = useState("😸");
-	const [winner, setWinner] = useState("");
+	const [winner, setWinner] = useState(null);
 
 	const ChangeTurn = () => setTurn(turn === "😸" ? "😿" : "😸");
 
+	useEffect(() => {
+		CheckWinner();
+		if (!winner) {
+			ChangeTurn();
+		}
+	}, [table]);
+
 	const SetValue = (i, j) => {
 		if (typeof table[i][j] === "undefined") {
-			if (!CheckWinner()) {
-				const tmp = table;
-				tmp[i][j] = turn;
-				setTable(table);
-				ChangeTurn();
-			}
-		} else {
+			let tmp = table;
+			tmp[i][j] = turn;
+			setTable([...table]);
 		}
 	};
 
@@ -120,18 +123,10 @@ const Home = () => {
 			CheckMayorDiagonal() ||
 			CheckMenorDiagonal()
 		) {
-			if (winner == "") {
-				setWinner(`${turn} ha ganado`);
-			}
+			setWinner(`${turn} Ha ganado`);
 		}
 	};
 
-	if (CheckWinner()) {
-		const tmp = table;
-		tmp[i][j] = turn;
-		setTable(table);
-		ChangeTurn();
-	}
 	return (
 		<>
 			<div className="body">
