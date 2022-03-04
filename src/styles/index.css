@@ -1,9 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 body{
     background-color: #FBAB7E;
 background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 
- 
-    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -11,7 +10,7 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 .board{
    
     margin: auto;
-    margin-top: 8%;
+    margin-top: 5rem;
     
 }
 .item{
@@ -30,16 +29,24 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 
 }
 .title{
-    
-    padding-top: 3%;
-    width: 100%;
-    text-align: center;
-
+    background-image: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+    border: 2pt solid black;
+    box-shadow: 7px 5px 5px black;
+    border-radius: 2rem;
+    width: 30rem;
+    display: flex;
+    margin: auto;
+    margin-top: 3%;
+   text-align: center;
+   justify-content: center;
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+   font-family: 'Anton', sans-serif;
 }
 .quest{
-    
     font-size: 2rem;
     text-align: center;
+font-family: 'Anton', sans-serif;
 }
 
 
@@ -51,14 +58,14 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     box-shadow: 7px 5px 5px black;
     border-radius: 2rem;
     width: 20rem;
-    height: 4rem;
-
-    position: absolute;
-    margin-top: 1%;
-    margin-left: 42%;
+    height: 5rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-   
+    margin: auto;
+    margin-top: 5rem;
+    text-align: center;
+    padding: 1rem;
+font-family: 'Anton', sans-serif;
+
+ 
 }
 

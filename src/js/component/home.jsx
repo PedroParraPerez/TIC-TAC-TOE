@@ -123,7 +123,7 @@ const Home = () => {
 			CheckMayorDiagonal() ||
 			CheckMenorDiagonal()
 		) {
-			setWinner(`${turn} Ha ganado`);
+			setWinner(turn);
 		}
 	};
 
@@ -134,7 +134,17 @@ const Home = () => {
 				<p className="quest">
 					<b>¿El gato de Schrödinger esta vivo o muerto?</b>
 				</p>
-				<h1 className="winner">{winner}</h1>
+				{CheckRow() ||
+				CheckColumnns() ||
+				CheckMayorDiagonal() ||
+				CheckMenorDiagonal() ? (
+					<h1 className="winner" style={{ display: "flex" }}>
+						{winner} "Ha ganado"
+					</h1>
+				) : (
+					<h1 className="winner" style={{ display: "none" }}></h1>
+				)}
+
 				<table className="board">
 					<tbody>
 						{table.map((row, i) => (
