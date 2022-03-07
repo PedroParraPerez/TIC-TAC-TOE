@@ -99,7 +99,7 @@ Correo: pedroparra06091994@gmail.com
 
 
 
-
+<a href="https://www.markdownguide.org" target="_blank">Learn Markdown!</a>
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
