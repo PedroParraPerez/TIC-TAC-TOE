@@ -61,23 +61,11 @@ Of course, no one template will serve all projects since your needs may be diffe
 Use the `BLANK_README.md` to get started.
 
 
-
-
-
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 
 * [React.js](https://reactjs.org/)
 * [Bootstrap](https://getbootstrap.com)
 
-
-
-
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
 To be able to observe the compilation of the project you have to execute this command in the console:
@@ -88,7 +76,6 @@ To be able to observe the compilation of the project you have to execute this co
   ```
 
 
-<!-- CONTACT -->
 ## Contact
 
 Correo: pedroparra06091994@gmail.com
@@ -97,9 +84,6 @@ Correo: pedroparra06091994@gmail.com
 
 
 
-
-
-<a href="https://www.markdownguide.org" target="_blank">Learn Markdown!</a>
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
