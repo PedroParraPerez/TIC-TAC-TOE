@@ -60,7 +60,7 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 Use the `BLANK_README.md` to get started.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 
@@ -73,7 +73,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [Bootstrap](https://getbootstrap.com)
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 
@@ -92,20 +92,16 @@ To be able to observe the compilation of the project you have to execute this co
 ## Contact
 
 Correo: pedroparra06091994@gmail.com
-[@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
+
+
+
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/PedroParraPerez/TIC-TAC-TOE/issues
-
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/pedroparrap/
-[product-screenshot]: images/screenshot.png
+
