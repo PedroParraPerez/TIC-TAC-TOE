@@ -80,11 +80,11 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
+To be able to observe the compilation of the project you have to execute this command in the console:
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install && npm run start
   ```
 
 
