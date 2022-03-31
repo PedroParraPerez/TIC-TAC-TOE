@@ -1,5 +1,5 @@
 ![4Geeks Logo](https://4geeksacademy.com//images/4geeks-logo.png)
-# Proyecto Generador de excusas aleatorio
+# Proyecto TIC TAC TOE
 ## Owners:
 ### 	- Pedro Parra
 ### 	
